@@ -1,0 +1,538 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "fcb-bold";
+  src: url("../fonts/FC_BARCELONA-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "fcb-extrabold";
+  src: url("../fonts/FC_BARCELONA-Extrabold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "fcb-semibold";
+  src: url("../fonts/FC_BARCELONA-Semibold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "fcb-regular";
+  src: url("../fonts/FC_BARCELONA-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "fcb-light";
+  src: url("../fonts/FC_BARCELONA-Light.woff2") format("woff2");
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  background-color: #171733;
+}
+.main-header {
+  width: 100%;
+  height: 12.8rem;
+
+  display: grid;
+  grid-template-columns: 4fr repeat(19, 1fr);
+  grid-template-rows: 7fr 9fr 1fr;
+}
+
+.main-logo {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-color: #171733;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border-right: #282841 solid 0.2rem;
+  align-items: center;
+}
+
+.header-followus {
+  grid-column: 2 / 18;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0a0928;
+  color: #9d9da9;
+  border-right: #282841 solid 0.2rem;
+  border-bottom: #282841 solid 0.2rem;
+}
+
+.header-social-icon {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  margin-left: 1rem;
+  align-self: center;
+  font-family: "fcb-bold";
+}
+.header-lbl {
+  display: flex;
+
+  gap: 2rem;
+  align-self: center;
+  color: white;
+  align-items: center;
+  margin-right: 2rem;
+}
+.login {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "fcb-extrabold";
+}
+.culer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(90deg, #8c1a17, #cd122d);
+  height: 4rem;
+  align-items: center;
+  width: 14rem;
+  border-radius: 0.7rem;
+  font-family: "fcb-extrabold";
+}
+.culer p {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.language {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  font-family: "fcb-semibold";
+}
+.language img {
+  align-self: center;
+}
+.header-barca {
+  grid-column: 18/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: #282841 solid 0.2rem;
+  background-color: #0a0928;
+  color: white;
+  font-family: "fcb-bold";
+}
+
+.header-first-team {
+  grid-column: 2 / span 3;
+  background-color: #171733;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+  position: relative;
+}
+.header-first-team-subMneu {
+  position: absolute;
+  width: 20rem;
+  top: 6rem;
+  left: -2rem;
+  display: none;
+  z-index: 1;
+}
+.header-first-team-subMneu li {
+  list-style: none;
+  background-color: #154285;
+  padding-left: 1rem;
+  padding-bottom: 2rem;
+}
+.header-first-team a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-first-team:hover .header-first-team-subMneu {
+  display: block;
+}
+.header-tickets {
+  grid-column: 5 / span 3;
+  background-color: #171733;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+}
+.header-tickets a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-shop {
+  grid-column: 8 / span 3;
+  background-color: #171733;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+}
+.header-shop a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-culers {
+  grid-column: 11 / span 3;
+  background-color: #171733;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+}
+.header-culers a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-club {
+  grid-column: 14 / span 3;
+  background-color: #171733;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+}
+.header-club a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-barca-team {
+  grid-column: 17 / span 3;
+  background-color: #171733;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  border-right: #282841 solid 0.2rem;
+  font-family: "fcb-bold";
+}
+.header-barca-team a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.header-search {
+  grid-column: 20/-1;
+  background-color: #171733;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-down-line {
+  grid-column: 1/-1;
+  background: linear-gradient(90deg, #154284 0, #cd122d);
+}
+
+.section--1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  background-color: white;
+  padding: 2rem;
+  height: 32.5rem;
+}
+.section--1--title {
+  margin: 0 auto;
+  font-size: 3rem;
+  color: #672e5b;
+}
+.section--1--images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.container {
+  width: 132rem;
+  margin: 0 auto;
+}
+.section--2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+.section--2--title {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  align-items: center;
+}
+.section--2--title_barca {
+  display: flex;
+  gap: 1rem;
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, #cd122d, #154284);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.section--2--title_next-match {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.section--2_time {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+.section--2_days,
+.section--2_hours,
+.section--2_mins,
+.section--2_secs {
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.section--2_days p:first-child,
+.section--2_hours p:first-child,
+.section--2_mins p:first-child,
+.section--2_secs p:first-child {
+  margin: 0 auto;
+  font-family: "fcb-extrabold";
+}
+.section--2_days p:last-child,
+.section--2_hours p:last-child,
+.section--2_mins p:last-child,
+.section--2_secs p:last-child {
+  font-size: 1rem;
+  color: #7c7063;
+  margin: 0 auto;
+  font-family: "fcb-bold";
+}
+.section--2_days p:first-child {
+  background: linear-gradient(90deg, #cd122d, #a71c3f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.section--2_hours p:first-child {
+  background: linear-gradient(90deg, #a71c3f, #712a59);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.section--2_mins p:first-child {
+  background: linear-gradient(90deg, #712a59, #3a3872);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.section--2_secs p:first-child {
+  background: linear-gradient(90deg, #3a3872, #154284);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+}
+.section--2_donoghte {
+  font-size: 5rem;
+  align-self: flex-start;
+  font-family: "fcb-light";
+}
+.section--2--sync {
+  display: flex;
+  gap: 2rem;
+}
+.section--2--sync_cal {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #154284;
+}
+.section--2--arrows {
+  display: flex;
+  gap: 0.3rem;
+}
+.section--2--arrows span {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #154284;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid #bfbfbf;
+}
+.section--2--arrows span:first-child {
+  background-color: #fcfcfc;
+}
+.section--2--arrows span:last-child {
+  background-color: #f7f7f7;
+}
+.section--2--title_barca p:first-child,
+.section--2--title_fp,
+.section--2--sync_cal p {
+  font-family: "fcb-extrabold";
+}
+.section--2--title_barca p:last-child {
+  font-family: "fcb-regular";
+}
+.section--2--score--boards {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+}
+.section--2--viewall {
+  background: url("../image/fixture-scroller-bg@x2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  border: none;
+  width: 32%;
+  height: 40.2rem;
+}
+.section--2--viewall p {
+  display: block;
+  font-size: 4rem;
+  color: white;
+}
+.section--2--viewall--div {
+  background-image: linear-gradient(
+    230deg,
+    rgba(24, 23, 53, 0.9),
+    rgba(154, 0, 11, 0.9)
+  );
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section--2--gamecard {
+  width: 32%;
+  border: solid black 0.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.section--2--gamecard_time {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #154285;
+  padding: 0.6rem;
+  color: white;
+}
+.section--2--gamecard_time_fp {
+  font-size: 3rem;
+}
+.section--2--game-detail {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 4fr 1fr 3fr 3fr 1fr;
+  row-gap: 0.5rem;
+  row-gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.section--2--league {
+  margin-top: 1rem;
+}
+.section--2--team {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 8fr 3fr 7fr 1fr;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.section--2--score {
+  justify-self: center;
+  background: linear-gradient(180deg, #2c4481 0, #181733);
+  width: 8rem;
+  height: 4rem;
+
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.section--2--right {
+  justify-self: end;
+  margin-right: 0.5rem;
+}
+.section--2--versus {
+  justify-self: center;
+  align-self: center;
+}
+.section--2--btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 5rem;
+  font-size: 1.2rem;
+}
+
+.section--2--btn div:first-child {
+  background-color: #171733;
+  height: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  border-radius: 0.3rem;
+  border: solid red 0.1rem;
+}
+.section--2--btn div:last-child {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: #154284;
+}
+.section--2--goaltime {
+  font-size: 1rem;
+  color: #727272;
+}
+.section--2--viewall--div p span,
+.section--2--gamecard_time,
+.section--2--versus,
+.section--2--sta {
+  font-family: "fcb-light";
+}
+.section--2--viewall--div p,
+.section--2--btn {
+  font-family: "fcb-bold";
+}
+
+.section--2--gamecard_time_fp,
+.section--2--gamecard_time span,
+.section--2--score,
+.section--2--versus b {
+  font-family: "fcb-extrabold";
+}
